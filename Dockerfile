@@ -1,5 +1,5 @@
 FROM dockerfile/supervisor
-MAINTAINER Yuji ODA
+MAINTAINER hernando
 
 # Installing Dependencies
 RUN apt-get update; \
