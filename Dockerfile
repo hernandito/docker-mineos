@@ -1,9 +1,9 @@
-FROM dockerfile/supervisor
+FROM phusion/baseimage:0.9.16
 MAINTAINER hernando
 
 # Installing Dependencies
 RUN apt-get update; \
-    apt-get -y install screen python-cherrypy3 rdiff-backup git openjdk-7-jre-headless; \
+    apt-get -y install screen python-cherrypy3 rdiff-backup git openjdk-8-jre-headless; \
     apt-get -y install openssh-server uuid pwgen
 
 # Installing MineOS scripts
