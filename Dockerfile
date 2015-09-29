@@ -25,18 +25,18 @@ RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 # Installing Dependencies
 RUN \ 
-
 	apt-get update && \
 	apt-get install -y software-properties-common python-software-properties && \
+	add-apt-repository -y ppa:webupd8team/java && \
 
-	add-apt-repository ppa:webupd8team/java && \
+RUN \	
 	apt-get update && \
-
 	apt-get install -y default-jre && \
 	apt-get install -y default-jdk && \
 	apt-get install -y oracle-java8-installer && \
-	apt-get install -y oracle-java8-set-default && \
+	apt-get install -y oracle-java8-set-default
 
+RUN \		
 	apt-get update && \
     apt-get -y install screen python-cherrypy3 mc rdiff-backup git  && \
     apt-get -y install openssh-server uuid pwgen
