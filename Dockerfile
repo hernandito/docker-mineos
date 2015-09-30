@@ -25,6 +25,7 @@ RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 # Installing Dependencies
 RUN apt-get update
+RUN apt-get upgrade
 RUN apt-get install -y software-properties-common python-software-properties 
 RUN add-apt-repository -y ppa:webupd8team/java
 
