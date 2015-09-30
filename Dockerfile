@@ -27,7 +27,7 @@ RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 RUN \ 
 	apt-get update && \
 	apt-get install -y software-properties-common python-software-properties && \
-	add-apt-repository -y ppa:webupd8team/java && \
+	add-apt-repository -y ppa:webupd8team/java
 
 RUN \	
 	apt-get update && \
@@ -43,7 +43,7 @@ RUN \
 
 # Installing MineOS scripts
 RUN \
-	mkdir -p /usr/games /var/games/minecraft && \
+    mkdir -p /usr/games /var/games/minecraft && \
     git clone git://github.com/hexparrot/mineos /usr/games/minecraft && \
     cd /usr/games/minecraft && \
     chmod +x server.py mineos_console.py generate-sslcert.sh && \
